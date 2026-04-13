@@ -1,0 +1,528 @@
+/* Sistema de Pedidos de Lanches - CSS Customizado */
+
+:root {
+    --primary-color: #ff6b35;
+    --secondary-color: #f8f9fa;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+}
+
+/* Cards de produtos */
+.card-food {
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.card-food:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card-food .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-food .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-food .card-title {
+    font-weight: bold;
+    color: var(--dark-color);
+}
+
+.card-food .card-text {
+    flex-grow: 1;
+    color: #6c757d;
+}
+
+.card-food .price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Status dos pedidos */
+.status-badge {
+    padding: 0.375rem 0.75rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.status-pendente {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.status-preparando {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+}
+
+.status-pronto {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status-entregue {
+    background-color: #d6d8db;
+    color: #383d41;
+    border: 1px solid #c8cbcf;
+}
+
+.status-cancelado {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Carrinho flutuante */
+.cart-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 50px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.cart-float:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.cart-float i {
+    font-size: 1.2rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--danger-color);
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Modal do carrinho */
+.modal-cart .modal-dialog {
+    max-width: 600px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item-title {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.cart-item-price {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dee2e6;
+    background: white;
+    color: var(--dark-color);
+}
+
+.quantity-control button:hover {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* === DASHBOARD ADMINISTRATIVO === */
+
+.stats-card {
+    background: linear-gradient(135deg, var(--primary-color), #ff8f65);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-icon {
+    font-size: 2.5rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.stats-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.stats-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Status badges */
+.status-badge {
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status-pendente {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.status-preparando {
+    background-color: #cce5ff;
+    color: #004085;
+    border: 1px solid #99d6ff;
+}
+
+.status-pronto {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #9acccd;
+}
+
+.status-entregue {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #a3cfbb;
+}
+
+.status-cancelado {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f1aeb5;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e9ecef;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline-item.completed .timeline-marker {
+    background-color: var(--success-color) !important;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -22px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: #6c757d;
+}
+
+.timeline-content h6 {
+    margin-bottom: 2px;
+}
+
+/* Cards de categoria no admin */
+.categoria-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+}
+
+.categoria-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.categoria-stats {
+    margin-top: 10px;
+}
+
+/* Badges de tipo de usuário */
+.tipo-badge {
+    font-size: 0.8em;
+    padding: 0.25rem 0.5rem;
+    border-radius: 15px;
+}
+
+.tipo-cliente {
+    background-color: var(--info-color);
+    color: white;
+}
+
+.tipo-funcionario {
+    background-color: var(--warning-color);
+    color: #000;
+}
+
+.tipo-admin {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .stats-card {
+        margin-bottom: 1rem;
+    }
+
+    .stats-value {
+        font-size: 1.5rem;
+    }
+
+    .stats-icon {
+        font-size: 2rem;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-marker {
+        left: -17px;
+        width: 12px;
+        height: 12px;
+    }
+}
+
+.quantity-control span {
+    min-width: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Formulários */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(255, 107, 53, 0.25);
+}
+
+/* Botões */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #e55a2b;
+    border-color: #e55a2b;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Dashboard Admin */
+.stats-card {
+    background: linear-gradient(135deg, var(--primary-color), #e55a2b);
+    color: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+}
+
+.stats-card .stats-icon {
+    font-size: 2rem;
+    opacity: 0.8;
+    margin-bottom: 0.5rem;
+}
+
+.stats-card .stats-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.stats-card .stats-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .cart-float {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 16px;
+    }
+
+    .cart-float i {
+        font-size: 1rem;
+    }
+
+    .card-food .card-img-top {
+        height: 150px;
+    }
+
+    .stats-card {
+        padding: 1rem;
+    }
+
+    .stats-card .stats-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Loading spinner */
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Toast notifications */
+.toast-custom {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    min-width: 300px;
+}
+
+.toast-custom .toast {
+    background: white;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Estilo para produtos indisponíveis */
+.produto-indisponivel {
+    opacity: 0.6;
+    position: relative;
+}
+
+.produto-indisponivel::after {
+    content: "INDISPONÍVEL";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    background: rgba(220, 53, 69, 0.9);
+    color: white;
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 10;
+}

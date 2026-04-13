@@ -180,39 +180,14 @@ sistema-lanches/
 - **Tempo de vida**: 24 horas (configurável em `php.ini`)
 - **Segurança**: Sessões HTTP-only habilitadas
 
-### Validações
-- **Senhas**: Mínimo 6 caracteres, hash bcrypt
-- **Emails**: Validação de formato
-- **Preços**: Valores positivos, até 2 casas decimais
+
 
 ## 🐛 Troubleshooting
 
 ### Problemas Comuns no XAMPP
 
-#### ❌ "Página não carrega" ou "Erro 404"
-**Solução:**
-- Verifique se Apache está rodando no XAMPP Control Panel
-- Confirme se a pasta está em `C:\xampp\htdocs\sistema-lanches\`
-- Tente acessar: `http://localhost/sistema-lanches/index.php`
 
-#### ❌ "Erro de conexão com banco de dados"
-**Solução:**
-- Verifique se MySQL está rodando no XAMPP Control Panel
-- Confirme se o banco `sistema_lanches` foi criado no phpMyAdmin
-- Verifique credenciais em `config/database.php`
-- Credenciais padrão XAMPP: `localhost`, `root`, senha vazia
 
-#### ❌ "Permissões de pasta" (upload de imagens)
-**Solução:**
-1. Vá para `C:\xampp\htdocs\sistema-lanches\assets\images\produtos\`
-2. Clique com botão direito → Propriedades → Segurança
-3. Dê permissões completas para o usuário atual
-
-#### ❌ "PHP não encontra arquivos"
-**Solução:**
-- Verifique se todos os arquivos foram copiados
-- Execute `http://localhost/sistema-lanches/check_install.php`
-- Recarregue a página com Ctrl+F5
 
 ### Verificação de Instalação
 Execute o script de verificação:
@@ -225,44 +200,11 @@ Este script verifica automaticamente:
 - Extensões necessárias
 - Conexão com banco
 - Arquivos e pastas
-- Permissões
-
-### Problemas Gerais
-
-#### Erro de Conexão com Banco
-1. Verifique se o MySQL está rodando
-2. Confirme as credenciais em `config/database.php`
-3. Certifique-se de que o banco `sistema_lanches` existe
-
-#### Imagens não Carregam
-1. Verifique permissões do diretório `assets/images/produtos/`
-2. Confirme se o PHP tem extensão GD habilitada
-3. Verifique caminhos relativos nos templates
-
-#### Sessões não Funcionam
-1. Verifique se `session.save_path` está configurado
-2. Confirme permissões da pasta de sessões
-3. Verifique se cookies estão habilitados no navegador
-
-## 🤝 Contribuição
+  Permissões
+# 🤝 Contribuição
 
 1. Fork o projeto
 2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
 3. Commit suas mudanças (`git commit -am 'Adiciona nova feature'`)
 4. Push para a branch (`git push origin feature/nova-feature`)
 5. Abra um Pull Request
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 📞 Suporte
-
-Para suporte, entre em contato:
-- **Email**: suporte@sistemalanches.com
-- **Issues**: Abra uma issue no GitHub
-- **Wiki**: Documentação completa no repositório
-
----
-
-**Desenvolvido com ❤️ para estabelecimentos de food service**
